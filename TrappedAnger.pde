@@ -39,12 +39,24 @@ void draw()
   //g_Curve.Display();
   g_Curve.Update();
   
-  if (random(1.0) < 0.01 && g_Curve.m_Nodes.size() < 10)
+  float chanceToAddNewNode = 0.004 * (10 - g_Curve.m_Nodes.size());
+  if (chanceToAddNewNode < 0.0)
   {
+   chanceToAddNewNode = 0.004; 
+  }
+  
+  if (random(1.0) < chanceToAddNewNode)
+  {   
    CurveNode newNode = new CurveNode(new PVector(random(width), random(height)));
    g_Curve.m_Nodes.add(newNode);
   }
-  else if (g_Curve.m_Nodes.size() > 3 && random(1.0) < 0.008f)
+  
+  float chanceToRemoveNode = 0.003 * g_Curve.m_Nodes.size();
+  if (chanceToRemoveNode < 0.0)
+  {
+   chanceToRemoveNode = 0.003; 
+  }
+  if (g_Curve.m_Nodes.size() > 3 && random(1.0) < chanceToRemoveNode)
   {
     int randNode = (int)random(g_Curve.m_Nodes.size());
     g_Curve.m_Nodes.remove(randNode);
