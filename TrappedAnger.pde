@@ -1,9 +1,9 @@
 float g_DefaultNodeMass = 1.0f;
 float g_DefaultNodeSize = 20.0f;
 
-float g_IdealNodeDistance = 50.0f;
-float g_NodeSpringConstant = 0.1f;
-float g_NodeSpringFrictionCoeff = 0.01f;
+float g_IdealNodeDistance = 80.0f;
+float g_NodeSpringConstant = 0.2f;
+float g_NodeSpringFrictionCoeff = 0.05f;
 
 Curve g_Curve;
 
