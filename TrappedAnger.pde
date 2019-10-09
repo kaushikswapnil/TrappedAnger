@@ -24,8 +24,9 @@ void setup()
 
 void draw()
 {
-  fill(255,20);
+  fill(0,10);
   rect(0,0,width,height);
+  stroke(255);
   for (int iter = 0; iter < (g_Curve.m_Nodes.size()+1)/2; ++iter)
    {
     CurveNode node = g_Curve.m_Nodes.get(iter);    
