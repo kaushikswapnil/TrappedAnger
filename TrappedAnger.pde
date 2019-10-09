@@ -1,7 +1,7 @@
 float g_DefaultNodeMass = 1.0f;
 float g_DefaultNodeSize = 20.0f;
 
-float g_IdealNodeDistance = 80.0f;
+float g_IdealNodeDistance = 100.0f;
 float g_NodeSpringConstant = 0.2f;
 float g_NodeSpringFrictionCoeff = 0.05f;
 
@@ -27,7 +27,7 @@ void draw()
   fill(0,10);
   rect(0,0,width,height);
   stroke(255);
-  strokeWeight(3);
+  strokeWeight(5);
   for (int iter = 0; iter < (g_Curve.m_Nodes.size()+1)/2; ++iter)
    {
     CurveNode node = g_Curve.m_Nodes.get(iter);    
