@@ -54,6 +54,11 @@ void draw()
   else //RGB
   {
     colorMode(RGB, 255);
+    
+    textAlign(CENTER);
+    fill(255);
+    text("Press space to change the color mode.", width/2, 10);
+    
     stroke(255); 
   }
   
